@@ -6,14 +6,14 @@
     <title>Travel Landing Page</title>
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="./assets/svg/main-logo.svg">
-    <link rel="stylesheet" href="./style/global.css">
+    <link rel="stylesheet" href="./assets/common/vendor/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/style/global.css">
 </head>
 <body>
     <header>
-        <section class="header-section">
+        <section class="header-section container">
             <div class="search-block">
-                <input type="text" placeholder="Where do you want to go?">
-                <button>Search</button>
+                <img src="./assets/svg/search-icon.svg" alt="Search">
             </div>
             <nav class="nav-block">
                 <ul>
@@ -26,24 +26,25 @@
                 </ul>
             </nav>
             <div class="social-media-block">
-                <a href="#"><img src="./assets/fb-icon.avif" alt="Facebook"></a>
-                <a href="#"><img src="./assets/insta-icon.avif" alt="Instagram"></a>
-                <a href="#"><img src="./assets/pinterest-icon.avif" alt="Pinterest"></a>
-                <a href="#"><img src="./assets/twitter-icon.avif" alt="Twitter"></a>
+                <a href="#"><img src="./assets/images/fb-icon.avif" alt="Facebook"></a>
+                <a href="#"><img src="./assets/images/insta-icon.avif" alt="Instagram"></a>
+                <a href="#"><img src="./assets/images/pinterest-icon.avif" alt="Pinterest"></a>
+                <a href="#"><img src="./assets/images/twitter-icon.avif" alt="Twitter"></a>
             </div>
         </section>
     </header>
     <main>
         <section class="hero-banner">
             <div class="banner-image">
-                <img src="./assets/travel-hero-banner.avif" alt="Hero Banner">
+                <img src="./assets/images/travel-hero-banner.avif" alt="Hero Banner">
             </div>
             <div class="banner-content">
                 <h1>Travel Blog</h1>
-                <p>Going Places</p>
+                <p class="title-text">Going Places</p>
                 <p>I haven't been everywhere, but it's on my list</p>
             </div>
         </section> <!-- Hero Banner Section Ends Here -->
+
         <section class="featured-destinations">
             <div class="featured-destinations-content">
                 <p>I'm a paragraph. Click here to add your own text and edit me. It's easy.</p>
@@ -51,26 +52,284 @@
             </div>
             <div class="featured-destinations-grid">
                 <div class="destination-card">
-                    <img src="./assets/feature-travel-card-img1.avif" alt="Destination 1">
+                    <img src="./assets/images/feature-travel-card-img1.avif" alt="Destination 1">
                     <div class="destination-card-link">
                         <a href="#"><h3>Destination 1</h3></a>
                     </div>
                 </div>
                 <div class="destination-card">
-                    <img src="./assets/feature-travel-card-img2.avif" alt="Destination 2">
+                    <img src="./assets/images/feature-travel-card-img2.avif" alt="Destination 2">
                     <div class="destination-card-link">
                         <a href="#"><h3>Destination 2</h3></a>
                     </div>
                 </div>
                 <div class="destination-card">
-                    <img src="./assets/feature-travel-card-img3.avif" alt="Destination 3">
+                    <img src="./assets/images/feature-travel-card-img3.avif" alt="Destination 3">
                     <div class="destination-card-link">
                         <a href="#"><h3>Destination 3</h3></a>
                     </div>
                 </div>
             </div>
+        </section> <!-- Featured Destinations Section Ends Here -->
+
+        <section class="our-features-list" aria-labelledby="featured-in-title">
+            <div class="our-features-list__container container">
+                <h2 id="featured-in-title" class="our-features-list__title">As featured in</h2>
+        
+                <ul class="our-features-list__logos">
+                    <li class="feature-logo feature-logo--travel" aria-label="Travel Blog">
+                        <span aria-hidden="true"><strong>travel</strong><span>blog</span></span>
+                    </li>
+        
+                    <li class="feature-logo feature-logo--plane" aria-label="Plane Tour">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
+                        </svg>
+                        <span aria-hidden="true">PLANE<strong>TOUR</strong></span>
+                    </li>
+        
+                    <li class="feature-logo feature-logo--world" aria-label="World Travel">
+                        <span aria-hidden="true">WORLD<br>TRAVEL</span>
+                    </li>
+        
+                    <li class="feature-logo feature-logo--cloud" aria-label="Skycloud">
+                        <svg width="24" height="14" viewBox="0 0 24 16" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M19.35 6.04A7.49 7.49 0 0 0 12 0C9.11 0 6.6 1.64 5.35 4.04A5.994 5.994 0 0 0 0 10c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
+                        </svg>
+                        <span aria-hidden="true">sky<strong>cloud</strong></span>
+                    </li>
+                </ul>
+            </div>
+        </section> <!-- Our Features List Section Ends Here -->
+
+        <section class="travel-blog-post">
+            <article class="travel-blog-post-card">
+                <img src="./assets/images/blog-image1.avif" alt="Travel Blog Post 1">
+                <div class="travel-blog-post-content">
+                    <div class="travel-blog-post-author">
+                        <span class="travel-blog-post-author-image" aria-hidden="true"></span>
+                    <div class="travel-blog-post-author-details">
+                        <p>Admin</p>
+                        <p class="travel-blog-post-meta">Mar 25, 2023 <span aria-hidden="true">·</span> 1 min read</p>
+                    </div>
+                    </div>
+                    <a href="#">
+                        <h2>Travel Blog Post Title</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.</p>
+                    </a>
+                <div class="travel-blog-post-footer">
+                    <div class="travel-blog-post-engagement">
+                        <span aria-label="1,536 views">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6S2 12 2 12Z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            1,536
+                        </span>
+                        <span aria-label="0 comments">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5.5h16v12H9l-5 3v-15Z"></path>
+                            </svg>
+                            0
+                        </span>
+                    </div>
+                    <span class="travel-blog-post-likes" aria-label="4 likes">
+                        4
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.8 8.8c0 5-8.8 11-8.8 11s-8.8-6-8.8-11a4.6 4.6 0 0 1 8.8-1.6 4.6 4.6 0 0 1 8.8 1.6Z"></path>
+                        </svg>
+                    </span>
+                </div>
+                </div>
+            </article>
+            <article class="travel-blog-post-card">
+                <img src="./assets/images/blog-image2.avif" alt="Travel Blog Post 2">
+                <div class="travel-blog-post-content">
+                    <div class="travel-blog-post-author">
+                        <span class="travel-blog-post-author-image" aria-hidden="true"></span>
+                    <div class="travel-blog-post-author-details">
+                        <p>Help Desk</p>
+                        <p class="travel-blog-post-meta">Aug 19, 2025 <span aria-hidden="true">·</span> 1 min read</p>
+                    </div>
+                    </div>
+                    <a href="#">
+                        <h2>Travel Blog Post Title 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.</p>
+                    </a>
+                <div class="travel-blog-post-footer">
+                    <div class="travel-blog-post-engagement">
+                        <span aria-label="1,536 views">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6S2 12 2 12Z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            1,536
+                        </span>
+                        <span aria-label="0 comments">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 5.5h16v12H9l-5 3v-15Z"></path>
+                            </svg>
+                            0
+                        </span>
+                    </div>
+                    <span class="travel-blog-post-likes" aria-label="4 likes">
+                        4
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.8 8.8c0 5-8.8 11-8.8 11s-8.8-6-8.8-11a4.6 4.6 0 0 1 8.8-1.6 4.6 4.6 0 0 1 8.8 1.6Z"></path>
+                        </svg>
+                    </span>
+                </div>
+                </div>
+            </article>
+        </section> <!-- Travel Blog Post Section Ends Here -->
+
+        <section class="social-media">
+            <div class="social-media-content container">
+                <a href="#"><img src="./assets/images/fb-icon.avif" alt="Facebook"> Facebook</a>
+                <a href="#"><img src="./assets/images/insta-icon.avif" alt="Instagram"> Instagram</a>
+                <a href="#"><img src="./assets/images/pinterest-icon.avif" alt="Pinterest"> Pinterest</a>
+                <a href="#"><img src="./assets/images/twitter-icon.avif" alt="Twitter"> Twitter</a>
+            </div>
         </section>
-    </main>
+
+        <section class="gallery-strip" aria-label="Travel photo gallery">
+            <div class="swiper js-gallery-swiper">
+                <div class="swiper-wrapper">
+        
+                    <figure class="swiper-slide gallery-card" tabindex="0">
+                        <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80"
+                            alt="Terracotta vase with dried flowers overlooking the Aegean Sea" class="gallery-card__img"
+                            width="400" height="300" loading="lazy" decoding="async">
+                        <figcaption class="gallery-card__overlay">
+                            <p class="gallery-card__caption">#santorini, #greece, #travelblog, #islandlife, #goingplaces</p>
+                        </figcaption>
+                    </figure>
+        
+                    <figure class="swiper-slide gallery-card" tabindex="0">
+                        <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80"
+                            alt="Whitewashed cobblestone alleyway with blue shutters in Mykonos" class="gallery-card__img"
+                            width="400" height="300" loading="lazy" decoding="async">
+                        <figcaption class="gallery-card__overlay">
+                            <p class="gallery-card__caption">#mykonos, #architecture, #wanderlust, #mediterranean, #explore</p>
+                        </figcaption>
+                    </figure>
+        
+                    <figure class="swiper-slide gallery-card" tabindex="0">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+                            alt="Overhead view of black coffee, pastry, and laptop on white linen" class="gallery-card__img"
+                            width="400" height="300" loading="lazy" decoding="async">
+                        <figcaption class="gallery-card__overlay">
+                            <p class="gallery-card__caption">#morningcoffee, #slowliving, #remotework, #flatlay, #cozy</p>
+                        </figcaption>
+                    </figure>
+        
+                    <figure class="swiper-slide gallery-card" tabindex="0">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80"
+                            alt="Fresh croissants on white ceramic plates beside a bowl of strawberries"
+                            class="gallery-card__img" width="400" height="300" loading="lazy" decoding="async">
+                        <figcaption class="gallery-card__overlay">
+                            <p class="gallery-card__caption">#wix, #website, #freewebsite, #websitetemplate, #wix.com</p>
+                        </figcaption>
+                    </figure>
+        
+                    <figure class="swiper-slide gallery-card" tabindex="0">
+                        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=80"
+                            alt="Golden french fries served in a dark wire basket" class="gallery-card__img" width="400"
+                            height="300" loading="lazy" decoding="async">
+                        <figcaption class="gallery-card__overlay">
+                            <p class="gallery-card__caption">#foodie, #streetfood, #traveldiaries, #snacktime, #localflavors</p>
+                        </figcaption>
+                    </figure>
+        
+                    <figure class="swiper-slide gallery-card" tabindex="0">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+                            alt="Turquoise ocean waves along a sunlit sandy beach" class="gallery-card__img" width="400"
+                            height="300" loading="lazy" decoding="async">
+                        <figcaption class="gallery-card__overlay">
+                            <p class="gallery-card__caption">#beachvibes, #summerescape, #oceanview, #vacation, #paradise</p>
+                        </figcaption>
+                    </figure>
+        
+                </div>
+        
+                <button type="button" class="swiper-button-prev gallery-nav gallery-nav--prev" aria-label="Previous slide">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+        
+                <button type="button" class="swiper-button-next gallery-nav gallery-nav--next" aria-label="Next slide">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </section> <!-- Image Gallery Section Ends Here -->
+        
+        <footer>
+            <div class="footer-content container">
+                <!-- Footer Top: Logo, Navigation, Newsletter -->
+                <div class="footer-top">
+                    <div class="footer-about-column">
+                        <img src="./assets/images/footer-about-img.avif" alt="About Travel Services" class="footer-logo">
+                        <div class="footer-description">
+                            <h2>About Me</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde eligendi dignissimos distinctio in, quos beatae obcaecati fuga vitae, quam praesentium eaque. Rem nihil inventore corrupti ipsam, et rerum? Omnis, architecto?</p>
+                            <a class="read-more-link-text" href="#">Read More</a>
+                        </div>
+                    </div>
+                    <div class="footer-newsletter-column">
+                        <h2>Join My Mailing List</h2>
+                        <form class="subscribe-form" action="#" method="post">
+                            <label for="newsletter-email" class="visually-hidden">Email*</label>
+                            <input type="email" id="newsletter-email" name="email" placeholder="Enter your email here" required>
+                            <label for="to-check" class="visually-hidden agree-terms">
+                                <input type="checkbox" id="to-check" name="subscribe">
+                                I agree to the terms and conditions
+                            </label>
+                            <button class="subscribe-btn" type="submit">Subscribe Now</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Bottom Bar: Copyright, Back to Top, Social Links -->
+                <div class="footer-bottom">
+                    <p class="copyright">
+                        &copy; 2035 by Going Places. Powered and secured by <a href="#" target="_blank"
+                            rel="noopener noreferrer">Travel</a>
+                    </p>
+            
+                    <a href="#top" class="back-to-top" aria-label="Back to top of page">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+                    </a>
+            
+                    <nav aria-label="Social media links">
+                        <ul class="social-list">
+                            <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img
+                                        src="./assets/images/fb-icon.avif" alt="Facebook"></a></li>
+                            <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img
+                                        src="./assets/images/insta-icon.avif" alt="Instagram"></a></li>
+                            <li><a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer"><img
+                                        src="./assets/images/pinterest-icon.avif" alt="Pinterest"></a></li>
+                            <li><a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><img
+                                        src="./assets/images/twitter-icon.avif" alt="Twitter"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </footer> <!-- Footer Section Ends Here -->
+
+        <script src="./assets/common/vendor/js/swiper-bundle.min.js"></script>
+        <script src="./assets/js/image-gallery.js" defer></script>
+  </main>
 
 </body>
 </html>
